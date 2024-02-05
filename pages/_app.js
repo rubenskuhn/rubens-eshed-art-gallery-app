@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
   return (
     <MantineProvider theme={theme} defaultColorScheme="dark">
 
-        <Component {...pageProps} globalData={data} />
+        <Component {...pageProps} data={data} />
 
     </MantineProvider>
 
