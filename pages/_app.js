@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
     fetcher
   );
   if (error) return <div>Failed to load, Dumb-dumb</div>;
-  if (isLoading) return <div>Wait! Don't shoot! Loading...</div>;
+  if (isLoading) return <div>Wait! Don&apos;t shoot! Loading...</div>;
   return (
     <>
       <GlobalStyle />
