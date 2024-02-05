@@ -1,3 +1,4 @@
+
 import useSWR from "swr";
 import "@mantine/core/styles.css";
 import { createTheme, MantineProvider, GlobalStyles } from "@mantine/core";
@@ -23,5 +24,6 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} globalData={data} />
 
     </MantineProvider>
+
   );
 }
