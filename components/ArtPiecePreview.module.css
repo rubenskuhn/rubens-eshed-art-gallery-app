@@ -14,3 +14,17 @@
   font-family: Greycliff CF, var(--mantine-font-family);
   line-height: 1;
 }
+
+.ul {
+  list-style-type: none;
+  padding: 0 2vw;
+  margin: 1vh 2vw;
+}
+.li {
+  margin-bottom: 4vh;
+}
+
+.div{
+  margin-bottom: 4vh;
+
+}
