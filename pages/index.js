@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import Image from "next/image";
+import ArtPieces from "@/components/ArtPieces";
 
 export default function HomePage() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -19,21 +19,8 @@ export default function HomePage() {
     <div>
       <h1>Vomit... or Modern Art if you must</h1>
 
-      {data.map((artPiece) => {
-        return (
-          <div className="art-piece">
-            <p>{artPiece.artist}</p>
-            <p>{artPiece.name}</p>
-            <Image
-              src={artPiece.imageSource}
-              width={500}
-              height={500}
-              alt="Image of the art piece"
-            />
-          </div>
-        );
-      })}
+      <ArtPieces data={data} />
+
     </div>
   );
 }
-
