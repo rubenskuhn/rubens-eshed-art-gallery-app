@@ -1,10 +1,9 @@
-
 import useSWR from "swr";
+import Layout from "@/components/Layout";
 import "@mantine/core/styles.css";
 import { createTheme, MantineProvider, GlobalStyles } from "@mantine/core";
 import GlobalStyle from "../styles";
-import '../components/teststyles.css'
-// import Layout from "@/components/Layout";
+import "../components/teststyles.css";
 
 const theme = createTheme({
   fontFamily: "Open Sans, sans-serif",
@@ -21,11 +20,11 @@ export default function App({ Component, pageProps }) {
   if (error) return <h1>Error...</h1>;
 
   return (
-    <MantineProvider theme={theme} defaultColorScheme="dark">
-      <GlobalStyle />
+    <Layout>
+      <MantineProvider theme={theme} defaultColorScheme="dark">
+        <GlobalStyle />
         <Component {...pageProps} data={data} />
-
-    </MantineProvider>
-
+      </MantineProvider>
+    </Layout>
   );
 }
