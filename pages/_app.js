@@ -2,6 +2,8 @@
 import useSWR from "swr";
 import "@mantine/core/styles.css";
 import { createTheme, MantineProvider, GlobalStyles } from "@mantine/core";
+import GlobalStyle from "../styles";
+import '../components/teststyles.css'
 // import Layout from "@/components/Layout";
 
 const theme = createTheme({
@@ -20,7 +22,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <MantineProvider theme={theme} defaultColorScheme="dark">
-
+      <GlobalStyle />
         <Component {...pageProps} data={data} />
 
     </MantineProvider>
