@@ -1,5 +1,6 @@
 import GlobalStyle from "../styles";
 import useSWR from "swr";
+import Layout from "@/components/layout";
 
 export default function App({ Component, pageProps }) {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -12,8 +13,10 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <div>Wait! Don&apos;t shoot! Loading...</div>;
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} data={data} />
+      <Layout>
+        <GlobalStyle />
+        <Component {...pageProps} data={data} />
+      </Layout>
     </>
   );
 }

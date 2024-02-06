@@ -1,4 +1,5 @@
 import ArtPieces from "@/components/ArtPieces";
+import Navbar from "@/components/navbar";
 // import spotlightPage from "@/components/SpotLight";
 
 export default function HomePage({ data }) {
@@ -18,14 +19,19 @@ export default function HomePage({ data }) {
   // map and render data
 
   return (
-    <div>
-      <h1>Art Gallery</h1>
+    <>
+      <div>
+        <h1>Art Gallery</h1>
 
-      <h2>Spot Light of the Day:</h2>
-      <spotlightPage data={data} />
+        <h2>Spot Light of the Day:</h2>
+        <spotlightPage data={data} />
 
-      <h3>Other garbage:</h3>
-      <ArtPieces data={data} />
-    </div>
+        <h3>Other garbage:</h3>
+        <ArtPieces data={data} />
+        <div>
+          <Navbar />
+        </div>
+      </div>
+    </>
   );
 }
