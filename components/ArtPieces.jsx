@@ -7,12 +7,12 @@ export default function ArtPieces({ data }) {
     <ul className={classes.ul}>
       {data.map((artPiece) => {
         return (
-          <div key={artPiece.slug} className={classes.div} >
+          <div key={artPiece.slug} className={classes.div}>
             <ArtPiecePreview
-            artist= {artPiece.artist}
-            title= {artPiece.name}
-            image = {artPiece.imageSource}
-
+              artist={artPiece.artist}
+              title={artPiece.name}
+              image={artPiece.imageSource}
+              slug={artPiece.slug}
             />
           </div>
         );
