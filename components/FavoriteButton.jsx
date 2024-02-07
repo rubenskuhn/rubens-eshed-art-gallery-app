@@ -12,7 +12,7 @@ const StyledButton = styled.button`
 `;
 
 export default function FavoriteButton() {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState("");
 
   const toggleFavorite = () => {
     setIsFavorite(!isFavorite);

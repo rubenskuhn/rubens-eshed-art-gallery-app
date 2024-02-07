@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Spotlight from "@/components/Spotlight";
+import { Card, Text, Group, RingProgress } from "@mantine/core";
+
+
 
 export default function spotlightPage({ data }) {
   function getRandomInt(max) {
