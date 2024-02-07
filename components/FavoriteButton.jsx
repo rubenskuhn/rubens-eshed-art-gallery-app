@@ -1,19 +1,50 @@
-// import svg from "./resources/assets/heart.svg";
-import Link from "next/link";
+import { useState } from "react";
 import Image from "next/image";
-import React, { useState } from "react";
+import styled from "styled-components";
 
-export default function isFavorite() {
+const StyledButton = styled.button`
+  position: absolute;
+  top: 3;
+  right: 3;
+  background: white;
+  border: red;
+  cursor: pointer;
+`;
+
+export default function FavoriteButton({ slug, handleToggleFavorite }) {
+  const [isFavorite, setIsFavorite] = useState("");
+  // const toggleIsFavorite = () => {
+  //   setIsFavorite(!isFavorite);
+  // };
+
   return (
-    <ToggleButton
-      class="favorite-button"
-      value="check"
-      selected={selected}
-      onChange={() => {
-        setSelected(!selected);
-      }}
+    <StyledButton
+      className="favorite-button"
+      aria-label="Save this art piece as favorite"
+      onClick={handleToggleFavorite}
+      position={(10, 10)}
     >
-      <CheckIcon />
-    </ToggleButton>
+      {isFavorite ? (
+        <Image
+          src="/assets/heart.svg"
+          alt="A filled heart"
+          width={100}
+          height={100}
+          position={(0, 0)}
+          // top: 10;
+          // right: 0;
+          // background: white;
+          // border: none;
+          // cursor: pointer;
+        />
+      ) : (
+        <Image
+          src="/assets/heart.svg"
+          alt="An outlined heart"
+          width={24}
+          height={24}
+        />
+      )}
+    </StyledButton>
   );
 }

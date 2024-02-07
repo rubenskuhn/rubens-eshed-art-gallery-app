@@ -2,13 +2,14 @@
 import { ArtPiecePreview, CardWithStats } from "./ArtPiecePreview";
 import classes from "./ArtPiecePreview.module.css";
 
-export default function ArtPieces({ data }) {
+export default function ArtPieces({ data, handleToggleFavorite }) {
   return (
     <ul className={classes.ul}>
       {data.map((artPiece) => {
         return (
           <div key={artPiece.slug} className={classes.div}>
             <ArtPiecePreview
+              handleToggleFavorite={handleToggleFavorite}
               artist={artPiece.artist}
               title={artPiece.name}
               image={artPiece.imageSource}

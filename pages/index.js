@@ -1,16 +1,20 @@
 import ArtPieces from "@/components/ArtPieces";
-// import spotlightPage from "@/components/SpotLight";
+import FavoriteButton from "@/components/FavoriteButton";
+import { Card } from "@mantine/core";
+import classes from "@/components/ArtPiecePreview.module.css";
 
-export default function HomePage({ data }) {
+export default function HomePage({ data, handleToggleFavorite }) {
   return (
-    <div>
+    <>
       <h1>Art Gallery</h1>
 
-      <h2>Spot Light of the Day:</h2>
-      <spotlightPage data={data} />
+      <h2>Your Favorite's List:</h2>
 
-      <h3>Other garbage:</h3>
-      <ArtPieces data={data} />
-    </div>
+      <div>
+        <Card withBorder padding="lg" className={classes.card}>
+          <ArtPieces data={data} handleToggleFavorite={handleToggleFavorite} />
+        </Card>
+      </div>
+    </>
   );
 }
