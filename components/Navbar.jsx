@@ -9,7 +9,7 @@ export default function Navbar() {
       <nav className="navegation">
         <Link href="/spotlight">Spotlight</Link>
         <Link href="/">Art Pieces</Link>
-        <Link href="/favourites">Favourites</Link>
+        <Link href="/favorites">Favourites</Link>
       </nav>
     </>
   );
