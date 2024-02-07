@@ -1,10 +1,15 @@
 import { Card, Image, Text, Group, RingProgress } from "@mantine/core";
 import classes from "./ArtPiecePreview.module.css";
 import Link from "next/link";
-import FavoriteButton from "./FavoriteButton.js";
+import FavoriteButton from "./FavoriteButton.jsx";
 
-
-export function ArtPiecePreview({ image, title = "", artist, slug, isFavorite }) {
+export function ArtPiecePreview({
+  image,
+  title = "",
+  artist,
+  slug,
+  isFavorite,
+}) {
   return (
     <Link href={`/art-pieces/${slug}`}>
       <Card withBorder padding="lg" className={classes.card}>
@@ -21,7 +26,6 @@ export function ArtPiecePreview({ image, title = "", artist, slug, isFavorite })
             <Text fz="sm" fw={700}>
               {artist}
             </Text>
-
           </Group>
         </Group>
       </Card>

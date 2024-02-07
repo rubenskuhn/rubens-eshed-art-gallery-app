@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import React, { useState } from "react";
 
-export default function Spotlight({ image, title, artist, width, height, isFavorite }) {
+export default function Spotlight({ randomArtPiece }) {
   return (
     <div className="art-piece">
       <p>{randomArtPiece.artist}</p>

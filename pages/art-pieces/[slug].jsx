@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import ArtPieceDetails from "@/components/ArtPieceDetails";
+import FavoriteButton from "@/components/FavoriteButton";
 
 export default function artPieceDetail({ data }) {
   const router = useRouter();
@@ -24,6 +25,7 @@ export default function artPieceDetail({ data }) {
         <button type="back-button" onClick={() => router.back()}>
           Back to Main
         </button>
+        <FavoriteButton />
       </div>
     </>
   );

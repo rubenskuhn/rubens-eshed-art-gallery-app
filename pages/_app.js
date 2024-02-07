@@ -4,7 +4,7 @@ import "@mantine/core/styles.css";
 import { createTheme, MantineProvider, GlobalStyles } from "@mantine/core";
 import GlobalStyle from "../styles";
 import "../components/teststyles.css";
-import FavoriteButton from "@/components/FavoriteButton.js";
+import FavoriteButton from "@/components/FavoriteButton.jsx";
 import useLocalStorageState from "use-local-storage-state";
 
 const theme = createTheme({
@@ -21,11 +21,12 @@ export default function App({ Component, pageProps }) {
   if (isLoading) return <h1>Loading...</h1>;
   if (error) return <h1>Error...</h1>;
 
-
   // toggle favorite button
   function handleToggleFavorite(slug) {
     setArtPiecesInfo((prevArtPiecesInfo) => {
-      const existingPieceIndex = prevArtPiecesInfo.findIndex((piece) => piece.slug === slug);
+      const existingPieceIndex = prevArtPiecesInfo.findIndex(
+        (piece) => piece.slug === slug
+      );
 
       if (existingPieceIndex !== -1) {
         // Art piece found, update its isFavorite property
@@ -41,17 +42,15 @@ export default function App({ Component, pageProps }) {
     });
   }
 
-
-
   return (
     <Layout>
       <MantineProvider theme={theme} defaultColorScheme="dark">
         <GlobalStyle />
-        <Component {...pageProps}
-        data={data}
-        onToggleFavorite={handleToggleFavorite}
-         />
-
+        <Component
+          {...pageProps}
+          data={data}
+          onToggleFavorite={handleToggleFavorite}
+        />
       </MantineProvider>
     </Layout>
   );

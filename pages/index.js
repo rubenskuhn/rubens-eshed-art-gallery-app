@@ -1,4 +1,5 @@
 import ArtPieces from "@/components/ArtPieces";
+import FavoriteButton from "@/components/FavoriteButton";
 // import spotlightPage from "@/components/SpotLight";
 
 export default function HomePage({ data }) {
@@ -10,7 +11,11 @@ export default function HomePage({ data }) {
       <spotlightPage data={data} />
 
       <h3>Other garbage:</h3>
-      <ArtPieces data={data} />
+
+      <div>
+        <ArtPieces data={data} />
+        <FavoriteButton />
+      </div>
     </div>
   );
 }
