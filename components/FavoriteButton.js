@@ -33,7 +33,7 @@ export default function FavoriteButton() {
         />
       ) : (
         <Image
-          src="/assets/heart-outline.svg"
+          src="/assets/heart.svg"
           alt="An outlined heart"
           width={24}
           height={24}
